@@ -1,5 +1,6 @@
 $(document).ready(function() {
     $('#search_form').submit(function(e) {
+
         e.preventDefault();
         var search = $('#search').val();
         var settings = {
@@ -10,13 +11,31 @@ $(document).ready(function() {
             }
             //This empties out the content of the div upon each new search
         $("#content").empty();
+
         $.ajax(settings).done(function(response) {
             var ct = $("#content");
             for (i = 0; i < response.results.length; i++) {
                 ct.append(response.results[i].description);
             }
+            $("img").addClass("img-fluid");
+
         });
 
     });
 
+    // Show or hide the sticky footer button
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 200) {
+            $('.to-top').fadeIn(200);
+        } else {
+            $('.to-top').fadeOut(200);
+        }
+    });
+
+    // Animate the scroll to top
+    $('.to-top').click(function(event) {
+        event.preventDefault();
+
+        $('html, body').animate({ scrollTop: 0 }, 300);
+    });
 });

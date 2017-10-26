@@ -2,10 +2,12 @@ body {
     background: #f5f5f5 !important;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    margin: 1em;
+figure {
+    width: auto !important;
+}
+
+h1 {
+    font-family: 'Saira Semi Condensed', sans-serif;
 }
 
 #content {
@@ -20,4 +22,14 @@ img {
     max-width: 300px;
     margin: 0 auto;
     line-height: 4;
+}
+
+.to-top {
+    position: fixed;
+    display: none;
+    right: 2em;
+    bottom: 2em;
+    background: #cccccc7a;
+    border-radius: 20px;
+    padding: .4em;
 }
