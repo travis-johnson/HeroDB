@@ -50,6 +50,6 @@ figcaption {
     figure a img {
         float: left;
         clear: both;
-        margin: 1em 1em 1em 0;
+        margin: 1em 1em 3em 0;
     }
 }

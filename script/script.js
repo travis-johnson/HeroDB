@@ -5,22 +5,24 @@ $(document).ready(function() {
         var search = $('#search').val();
         var settings = {
                 "async": true,
-                "url": "https://comicvine.gamespot.com/api/characters/?api_key=ee0dbaffd32c89c6a7b8e9745670e0fbe379e3c0&filter=name:" + search + "&field_list=description&format=json",
+                "url": "https://comicvine.gamespot.com/api/characters/?api_key=ee0dbaffd32c89c6a7b8e9745670e0fbe379e3c0&filter=name:" + search + "&format=json",
                 "method": "GET",
                 "contentType": "text/plain",
-                "Access-Control-Allow-Origin": "https://comicvine.gamespot.com",
-                "xhrFields": {
-                    "withCredentials": "false"
-                }
+                "Access-Control-Allow-Origin": "https://comicvine.gamespot.com"
+
             }
             //This empties out the content of the div upon each new search
-        $("#content").empty();
+        $(".name h1").empty();
+        $("#desc").empty();
 
         $.ajax(settings).done(function(response) {
-            var ct = $("#content");
+            var desc = $("#desc");
+            var name = $(".name h1");
             for (i = 0; i < response.results.length; i++) {
-                ct.append(response.results[i].description);
+                desc.append(response.results[i].description);
             }
+            name.append(response.results[0].name);
+
             $("img").addClass("img-fluid");
             $('a').each(function() {
                 this.href = this.href.replace('file:///F:', 'https://comicvine.gamespot.com')
