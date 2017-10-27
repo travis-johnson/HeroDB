@@ -18,7 +18,9 @@ $(document).ready(function() {
                 ct.append(response.results[i].description);
             }
             $("img").addClass("img-fluid");
-
+            $('a').each(function() {
+                this.href = this.href.replace('file:///F:', 'https://comicvine.gamespot.com')
+            })
         });
 
     });
@@ -38,4 +40,5 @@ $(document).ready(function() {
 
         $('html, body').animate({ scrollTop: 0 }, 300);
     });
+
 });
