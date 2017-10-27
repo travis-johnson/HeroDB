@@ -17,10 +17,7 @@ h1 {
 }
 
 #search_form {
-    padding: 2em;
     text-align: center;
-    max-width: 300px;
-    margin: 0 auto;
     line-height: 4;
 }
 
@@ -32,4 +29,16 @@ h1 {
     background: #cccccc7a;
     border-radius: 20px;
     padding: .4em;
+}
+
+figcaption {
+    display: none;
+}
+
+@media(min-width:1024px) {
+    figure a img {
+        float: left;
+        clear: both;
+        margin: 1em;
+    }
 }
