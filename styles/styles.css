@@ -4,6 +4,7 @@ body {
 
 figure {
     width: auto !important;
+    text-align: center;
 }
 
 h1 {
