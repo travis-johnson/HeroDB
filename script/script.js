@@ -5,7 +5,7 @@ $(document).ready(function() {
         var search = $('#search').val();
         var settings = {
                 "async": true,
-                "url": "http://comicvine.gamespot.com/api/characters/?api_key=ee0dbaffd32c89c6a7b8e9745670e0fbe379e3c0&filter=name:" + search + "&field_list=description&format=json",
+                "url": "https://comicvine.gamespot.com/api/characters/?api_key=ee0dbaffd32c89c6a7b8e9745670e0fbe379e3c0&filter=name:" + search + "&field_list=description&format=json",
                 "method": "GET",
                 "Access-Control-Allow-Origin": "https://travis-johnson.github.io/RandomHeroes/"
             }
