@@ -24,6 +24,7 @@ nav h1 {
 #content {
     overflow-y: hidden;
     overflow-x: hidden;
+    margin-top: 2em;
 }
 
 #search_form {
