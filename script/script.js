@@ -12,12 +12,12 @@ $(document).ready(function() {
 
             }
             //This empties out the content of the div upon each new search
-        $(".name h1").empty();
+        $(".name").empty();
         $("#desc").empty();
 
         $.ajax(settings).done(function(response) {
             var desc = $("#desc");
-            var name = $(".name h1");
+            var name = $(".name");
             for (i = 0; i < response.results.length; i++) {
                 desc.append(response.results[i].description);
             }
@@ -26,6 +26,7 @@ $(document).ready(function() {
             $("img").addClass("img-fluid");
             $('a').each(function() {
                 this.href = this.href.replace('file:///F:', 'https://comicvine.gamespot.com')
+                this.href = this.href.replace('file://', 'https://comicvine.gamespot.com')
             })
         });
 
