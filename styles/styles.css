@@ -46,6 +46,16 @@ figcaption {
     display: none;
 }
 
+#desc h1 {
+    font-family: 'Russo One', sans-serif;
+    font-size: 3em;
+    padding: .1em;
+    margin: 1em 0;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    text-shadow: #969696 1px 3px 0, #aba8a8 1px 13px 5px;
+}
+
 @media(min-width:1024px) {
     figure a img {
         float: left;
