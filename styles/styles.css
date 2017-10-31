@@ -7,6 +7,10 @@ figure {
     text-align: center;
 }
 
+figure a img {
+    border-radius: 10px;
+}
+
 h1 {
     font-family: 'Saira Semi Condensed', sans-serif;
 }

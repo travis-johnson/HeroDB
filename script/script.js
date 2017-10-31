@@ -12,11 +12,12 @@ $(document).ready(function() {
 
             }
             //This empties out the content of the div upon each new search
+
         $("#desc").empty();
 
         $.ajax(settings).done(function(response) {
             var desc = $("#desc");
-            var name = $(".name h1");
+            var name = $(".name");
             for (i = 0; i < response.results.length; i++) {
                 // desc.append(response.results[i].description);
                 desc.append('<h1 class="name">' + response.results[i].name + '</h1>' + '<div class="dsc">' + response.results[i].description + '</div>');
@@ -28,6 +29,7 @@ $(document).ready(function() {
             $("img").addClass("img-fluid");
             $('a').each(function() {
                 this.href = this.href.replace('file:///F:', 'https://comicvine.gamespot.com')
+                this.href = this.href.replace('file://', 'https://comicvine.gamespot.com')
             })
         });
 
