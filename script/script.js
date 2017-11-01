@@ -8,7 +8,6 @@ $(document).ready(function() {
                 "url": "https://comicvine.gamespot.com/api/characters/?api_key=ee0dbaffd32c89c6a7b8e9745670e0fbe379e3c0&filter=name:" + search + "&format=json",
                 "method": "GET",
                 "contentType": "text/plain",
-                "method": "get",
                 "headers": {
                     "Access-Control-Allow-Origin": "*"
                 }
