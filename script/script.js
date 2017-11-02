@@ -28,7 +28,7 @@ $(document).ready(function() {
             $("img").addClass("img-fluid");
             $('a').each(function() {
                 this.href = this.href.replace('file:///F:', 'https://comicvine.gamespot.com')
-                this.href = this.href.replace('file://', 'https://comicvine.gamespot.com')
+                this.href = this.href.replace('https://travis-johnson.github.io', 'https://comicvine.gamespot.com')
             })
         });
 
