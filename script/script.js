@@ -5,7 +5,7 @@ $(document).ready(function() {
         var search = $('#search').val();
         var settings = {
                 "async": true,
-                "url": "https://comicvine.gamespot.com/api/characters/?api_key=ee0dbaffd32c89c6a7b8e9745670e0fbe379e3c0&filter=name:" + search + "&format=json",
+                "url": "https://cors-anywhere.herokuapp.com/https://comicvine.gamespot.com/api/characters/?api_key=ee0dbaffd32c89c6a7b8e9745670e0fbe379e3c0&filter=name:" + search + "&format=json",
                 "method": "GET",
                 "contentType": "text/plain"
 
