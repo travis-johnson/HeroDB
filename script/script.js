@@ -17,16 +17,20 @@ $(document).ready(function() {
 
         $.ajax(settings).done(function(response) {
             var desc = $("#desc");
-            var name = $(".name");
             for (i = 0; i < response.results.length; i++) {
+
+
                 // desc.append(response.results[i].description);
                 desc.append('<h1 class="name">' + response.results[i].name + '</h1>' + '<div class="dsc">' + response.results[i].description + '</div>');
 
 
+
             }
             // $('.dsc').filter(function() { return $.text([this]) === 'null'; }).remove();
+            var img = $("<img>").attr("src", response.results[0].image.screen_large_url);
 
-
+            $('.dsc:contains("null")').remove('.name');
+            $('.dsc:contains("")').append(img)
 
             $("img").addClass("img-fluid");
             $('a').each(function() {
