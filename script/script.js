@@ -20,10 +20,13 @@ $(document).ready(function() {
             var name = $(".name");
             for (i = 0; i < response.results.length; i++) {
                 // desc.append(response.results[i].description);
-                desc.append('<h1 class="name">' + response.results[i].name + '</h1>' + '<div>' + response.results[i].description + '</div>');
+                desc.append('<h1 class="name">' + response.results[i].name + '</h1>' + '<div class="dsc">' + response.results[i].description + '</div>');
 
 
             }
+            // $('.dsc').filter(function() { return $.text([this]) === 'null'; }).remove();
+
+
 
             $("img").addClass("img-fluid");
             $('a').each(function() {
