@@ -7,18 +7,19 @@ figure {
     text-align: center;
 }
 
-figure a img {
-    border-radius: 10px;
-}
-
 h1 {
     font-family: 'Saira Semi Condensed', sans-serif;
+}
+
+h3 {
+    font-size: 1.2em;
 }
 
 nav {
     -webkit-box-shadow: 0px 3px 28px -1px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 3px 28px -1px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 3px 28px -1px rgba(0, 0, 0, 0.75);
+    margin-bottom: 1.5em;
 }
 
 nav h1 {
@@ -44,6 +45,7 @@ nav h1 {
     background: #cccccc7a;
     border-radius: 20px;
     padding: .4em;
+    background: rgba(218, 216, 216, 0.6);
 }
 
 figcaption {
@@ -62,8 +64,7 @@ figcaption {
 
 @media(min-width:1024px) {
     figure a img {
-        float: left;
         clear: both;
-        margin: 1em 1em 3em 0;
+        margin: 1em 1em 3.2em 0;
     }
 }
