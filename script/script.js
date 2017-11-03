@@ -17,15 +17,16 @@ $(document).ready(function() {
 
         $.ajax(settings).done(function(response) {
             var desc = $("#desc");
-            var name = $(".name");
             for (i = 0; i < response.results.length; i++) {
+
+
                 // desc.append(response.results[i].description);
-                desc.append('<h1 class="name">' + response.results[i].name + '</h1>' + '<div class="dsc">' + response.results[i].description + '</div>');
+                desc.append('<div class="result"><h1 class="name">' + response.results[i].name + '</h1>' + '<div class="dsc">' + response.results[i].description + '</div></div>');
+
+                // $('.dsc').filter(function() { return $.text([this]) === 'null'; }).remove('.result');
 
 
             }
-            // $('.dsc').filter(function() { return $.text([this]) === 'null'; }).remove();
-
 
 
             $("img").addClass("img-fluid rounded float-left");
