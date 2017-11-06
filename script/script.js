@@ -23,7 +23,6 @@ $(document).ready(function() {
                 // desc.append(response.results[i].description);
                 desc.append('<div class="result"><h1 class="name">' + response.results[i].name + '</h1>' + '<div class="dsc">' + response.results[i].description + '</div></div>');
 
-                // $('.dsc').filter(function() { return $.text([this]) === 'null'; }).remove('.result');
 
 
             }
