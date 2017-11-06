@@ -63,9 +63,12 @@ figcaption {
     text-shadow: #969696 1px 3px 0, #aba8a8 1px 9px 5px;
 }
 
-@media(min-width:1024px) {
+@media(min-width:768px) {
     figure a img {
+        float: left;
         clear: both;
         margin: 1em 1em 3.2em 0;
+        max-width: 50%;
+        height: auto;
     }
 }
