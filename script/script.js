@@ -3,9 +3,11 @@ $(document).ready(function() {
 
         e.preventDefault();
         var search = $('#search').val();
+        var proxy = 'https://cors-anywhere.herokuapp.com/';
+
         var settings = {
                 "async": true,
-                "url": "https://cors-anywhere.herokuapp.com/https://comicvine.gamespot.com/api/characters/?api_key=ee0dbaffd32c89c6a7b8e9745670e0fbe379e3c0&filter=name:" + search + "&format=json",
+                "url": proxy + "https://comicvine.gamespot.com/api/characters/?api_key=ee0dbaffd32c89c6a7b8e9745670e0fbe379e3c0&filter=name:" + search + "&format=json",
                 "method": "GET",
                 "contentType": "text/plain"
 
@@ -22,8 +24,8 @@ $(document).ready(function() {
 
                 // desc.append(response.results[i].description);
                 desc.append('<div class="result"><h1 class="name">' + response.results[i].name + '</h1>' + '<div class="dsc">' + response.results[i].description + '</div></div>');
-
-
+                // var replaced = $(".dsc").html().replace('null', 'No Info Available for this character.');
+                // $(".dsc").html(replaced);
 
             }
 
