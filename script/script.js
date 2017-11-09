@@ -24,8 +24,8 @@ $(document).ready(function() {
 
                 // desc.append(response.results[i].description);
                 desc.append('<div class="result"><h1 class="name">' + response.results[i].name + '</h1>' + '<div class="dsc">' + response.results[i].description + '</div></div>');
-                // var replaced = $(".dsc").html().replace('null', 'No Info Available for this character.');
-                // $(".dsc").html(replaced);
+                var replaced = $(".dsc").html().replace('null', '<h2 class="text-center">No Info Available for this character.</h2>');
+                $(".dsc").html(replaced);
 
             }
 
