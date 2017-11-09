@@ -20,15 +20,9 @@ $(document).ready(function() {
         $.ajax(settings).done(function(response) {
             var desc = $("#desc");
             for (i = 0; i < response.results.length; i++) {
-
-
                 // desc.append(response.results[i].description);
                 desc.append('<div class="result"><h1 class="name">' + response.results[i].name + '</h1>' + '<div class="dsc">' + response.results[i].description + '</div></div>');
-                var replaced = $(".dsc").html().replace('null', '<h2 class="text-center">No Info Available for this character.</h2>');
-                $(".dsc").html(replaced);
-
             }
-
 
 
 
