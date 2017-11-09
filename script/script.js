@@ -37,7 +37,9 @@ $(document).ready(function() {
                 this.href = this.href.replace('file:///F:', 'https://comicvine.gamespot.com')
                 this.href = this.href.replace('https://travis-johnson.github.io', 'https://comicvine.gamespot.com')
             })
-        });
+        }).fail(function(response) {
+            $("#desc").append('<h1>NO RESULTS FOUND</h1></br><h2 class="text-center">Try making a more specific request</h2>')
+        })
 
     });
 
