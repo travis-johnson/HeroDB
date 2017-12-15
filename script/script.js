@@ -25,11 +25,7 @@ $(document).ready(function() {
                 card.append('<div>'+'TEST'+'</div>');
                 // desc.append(response.results[i].description);
                 desc.append('<div class="result"><h1 class="name">' + response.results[i].name + '</h1>' + '<div class="dsc">' + response.results[i].description + '</div></div>');
-                // var replaced = $(".dsc").html().replace('null', 'No Info Available for this character.');
-                // $(".dsc").html(replaced);
-
             }
-
 
 
 
@@ -38,7 +34,9 @@ $(document).ready(function() {
                 this.href = this.href.replace('file:///F:', 'https://comicvine.gamespot.com')
                 this.href = this.href.replace('https://travis-johnson.github.io', 'https://comicvine.gamespot.com')
             })
-        });
+        }).fail(function(response) {
+            $("#desc").append('<h1>NO RESULTS FOUND</h1></br><h2 class="text-center">Try making a more specific request</h2>')
+        })
 
     });
 
