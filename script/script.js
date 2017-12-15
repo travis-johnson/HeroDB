@@ -16,12 +16,13 @@ $(document).ready(function() {
             //This empties out the content of the div upon each new search
 
         $("#desc").empty();
-
+            $("#result_card").empty();
         $.ajax(settings).done(function(response) {
             var desc = $("#desc");
+            var card = $("#result_card");
             for (i = 0; i < response.results.length; i++) {
 
-
+                card.append('<div>'+'TEST'+'</div>');
                 // desc.append(response.results[i].description);
                 desc.append('<div class="result"><h1 class="name">' + response.results[i].name + '</h1>' + '<div class="dsc">' + response.results[i].description + '</div></div>');
                 // var replaced = $(".dsc").html().replace('null', 'No Info Available for this character.');
