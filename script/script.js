@@ -16,19 +16,18 @@ $(document).ready(function() {
             //This empties out the content of the div upon each new search
 
         $("#desc").empty();
-            $("#result_card").empty();
         $.ajax(settings).done(function(response) {
             var desc = $("#desc");
             var card = $("#result_card");
+            var cardImg = $("#card_img");
+            var cardTitle = $("#card_title");
             for (i = 0; i < response.results.length; i++) {
-
-                card.append('<div>'+'TEST'+'</div>');
+              
+                // card.append('<div class="card">'+'<img class="" src='+response.results[i].image.small_url+'>' +'</div>');
                 // desc.append(response.results[i].description);
                 desc.append('<div class="result"><h1 class="name">' + response.results[i].name + '</h1>' + '<div class="dsc">' + response.results[i].description + '</div></div>');
             }
-
-
-
+            
             $("img").addClass("rounded");
             $('a').each(function() {
                 this.href = this.href.replace('file:///F:', 'https://comicvine.gamespot.com')
@@ -39,6 +38,7 @@ $(document).ready(function() {
         })
 
     });
+
 
     // Show or hide the sticky footer button
     $(window).scroll(function() {

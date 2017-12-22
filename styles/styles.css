@@ -63,6 +63,18 @@ figcaption {
     text-shadow: #969696 1px 3px 0, #aba8a8 1px 9px 5px;
 }
 
+#result_card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#result_card .card {
+    margin: 1em;
+    max-width: 30%;
+    height: auto;
+}
+
 @media(min-width:768px) {
     figure a img {
         float: left;
