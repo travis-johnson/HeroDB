@@ -26,6 +26,7 @@ $(document).ready(function() {
                 // card.append('<div class="card">'+'<img class="" src='+response.results[i].image.small_url+'>' +'</div>');
                 // desc.append(response.results[i].description);
                 desc.append('<div class="result"><h1 class="name">' + response.results[i].name + '</h1>' + '<div class="dsc">' + response.results[i].description + '</div></div>');
+                $(".dsc:contains(null)").html("Sorry, no information for this character.");
             }
             
             $("img").addClass("rounded");
