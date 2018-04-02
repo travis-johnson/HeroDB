@@ -19,13 +19,22 @@ $(document).ready(function() {
         $.ajax(settings).done(function(response) {
             var desc = $("#desc");
             var card = $("#result_card");
-            var cardImg = $("#card_img");
+            var headImg = $("#header_img");
             var cardTitle = $("#card_title");
             for (i = 0; i < response.results.length; i++) {
-              
                 // card.append('<div class="card">'+'<img class="" src='+response.results[i].image.small_url+'>' +'</div>');
-                // desc.append(response.results[i].description);
-                desc.append('<div class="result"><h1 class="name">' + response.results[i].name + '</h1>' + '<div class="dsc">' + response.results[i].description + '</div></div>');
+              
+
+                desc.append('<div class="result"><div class="row" id="header"><div class="deck col-sm-4"><p>'+ response.results[i].deck +'</p></div><div class="col-sm-4"><h1 class="name">' + response.results[i].name + '</h1>' 
+                + '<ul id="head_stats">'+ 
+                '<li><h3>First Appeared in </h3><p>'+ response.results[i].first_appeared_in_issue.name + " <br>(Issue No. "+ response.results[i].first_appeared_in_issue.issue_number + ')</p></li>' + 
+                '<li> <h3>Real Name: </h3>' + response.results[i].real_name + '</li>'+  
+                '</ul> </div> <div class="h_img col-sm-4"><img src= "' + response.results[i].image.small_url + '"> </div></div>' +
+                 '<div class="dsc">' + response.results[i].description + '</div></div>');
+
+                
+                // headImg.html('<img src= "' + response.results[i].image.small_url + '">');
+                // console.log(response.results[i].image.small_url);
                 $(".dsc:contains(null)").html("Sorry, no information for this character.");
             }
             
